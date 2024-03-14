@@ -1,0 +1,39 @@
+@import "../../../../../../main.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width:60%;
+  row-gap:20px;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap:10px;
+    border: 2px solid #3AA31E;
+    padding:10px;
+    border-radius:10px  ;
+    -webkit-border-radius:10px  ;
+    -moz-border-radius:10px  ;
+    -ms-border-radius:10px  ;
+    -o-border-radius:10px  ;
+}
+  input {
+    background: rgba(white, 0.3);
+    color: #fdf8f0;
+  }
+  /* удаление иконки стрелок */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input::placeholder {
+    color: rgba(white, 0.6)
+  }
+  legend {
+    color: #fdf8f0;
+    padding:0 10px;
+  }
+}

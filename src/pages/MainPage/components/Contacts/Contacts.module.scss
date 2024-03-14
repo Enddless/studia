@@ -1,0 +1,65 @@
+@import "../../../../main.module.scss";
+
+.contacts {
+  position: relative;
+  min-height: 160px;
+}
+.noMap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 30%;
+  }
+  .atention {
+    a {
+      color: #93650c;
+    }
+  }
+  .atention a:hover {
+    color: $body-color-secondary;
+    font-weight: 500;
+  }
+  span {
+    text-decoration: line-through;
+  }
+}
+.info {
+  width: 270px;
+  background: rgba($body-background-primary, 0.6);
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: absolute;
+  bottom: 17px;
+  left: 17px;
+  z-index: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include TextSecondary;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.phone,
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone svg,
+.location svg {
+  stroke: $body-color-primary;
+  fill: $body-color-primary;
+}
+
+.atention {
+  margin: 0 100px;
+  color: #93650c;
+}
+
+.spinnerContainer {
+  grid-column: span 12;
+  margin-top: 60px;
+}

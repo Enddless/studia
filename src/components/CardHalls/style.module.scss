@@ -1,0 +1,62 @@
+@import "../../main.module.scss";
+
+.container {
+  grid-column: span 4;
+  position: relative;
+}
+.photoContainer {
+  position: relative;
+  display: flex;
+  box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom:10px;
+}
+.caption {
+  position: absolute;
+  bottom: 0px;
+  color: #fffcf8;
+  width: 100%;
+  text-align: center;
+  color: $card-title-color;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+//расположение блоков в плитку,в случае если карточек больше 3
+.redisignBlock {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+
+  .photoContainer {
+    height: 439px;
+  }
+  .photoContainer, p {
+    width: 50%;
+  }
+  /* Стили для четных элементов */
+  &:nth-child(even) {
+    flex-direction: row-reverse; 
+  }
+}
+@media screen and (max-width: 800px) {
+  .redisignBlock {
+    flex-direction: column;
+    .photoContainer {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+    }
+    &:nth-child(even) {
+      flex-direction: inherit; 
+    }
+  }
+  .container {
+    grid-column: span 12;
+  }
+}
+
+
+

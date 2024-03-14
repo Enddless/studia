@@ -1,0 +1,92 @@
+@import "../../main.module.scss";
+
+.footer {
+  width: 100%;
+  padding: 30px 100px;
+  background: $footer-background;
+  color: $footer-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+  position: relative;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+}
+.centerMenu {
+  column-gap: 60px;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+.menuItem {
+  border-radius: 10px;
+  cursor: pointer;
+  @include H5;
+}
+.menuItem:hover {
+  color: #ffa800;
+}
+
+.phone,
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone svg,
+.location svg {
+  stroke: #fdf8f0;
+  fill: #fdf8f0;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 169px;
+  @include TextFieldDescription;
+}
+.socialBlock {
+  text-align: center;
+}
+
+.organization {
+  position: absolute;
+  bottom:0;
+  bottom: 0;
+  left: 50px;
+  font-size:14px;
+}
+@media screen and (max-width: 1100px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    .logo {
+      order: 2;
+      top: 0;
+    }
+  }
+  .footerNav {
+    order: 1;
+    width: 100%;
+  }
+  .contacts {
+    order: 3;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footer {
+    padding: 30px;
+    justify-content: center;
+  }
+  .centerMenu {
+    column-gap: 5px;
+  }
+}

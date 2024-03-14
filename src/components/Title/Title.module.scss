@@ -1,0 +1,33 @@
+@import "../../main.module.scss";
+
+.title {
+  white-space: nowrap;
+  grid-column: span 2;
+  color: $title-color-default;
+  text-align: center;
+}
+.container {
+  grid-column: span 12;
+
+  margin-bottom: 30px;
+  @include Grid;
+  align-items: center;
+}
+.line {
+  margin: 0 40px;
+  grid-column: span 5;
+  height: 1px;
+  background: linear-gradient(90deg, #563e0e 0%, rgba(86, 62, 14, 0) 100%);
+}
+.lineLeft {
+  grid-column: span 5;
+  height: 1px;
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 800px) {
+  .title,
+  .line {
+    grid-column: span 4;
+  }
+}

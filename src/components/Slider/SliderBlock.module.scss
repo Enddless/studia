@@ -1,0 +1,113 @@
+@import "../../main.module.scss";
+
+.slider {
+  cursor: pointer;
+  outline: none;
+}
+.sliderStaff {
+  margin: 60px -350px 0 -350px;
+  height: auto;
+}
+.banner {
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+}
+.wrapper {
+  margin: 0 15px;
+}
+.staffInfo {
+  display: grid !important;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  column-gap: 15px;
+  justify-content: center;
+
+  .staffDescr {
+    margin-right: 30px;
+  }
+  h5 {
+    margin-bottom: 10px;
+  }
+  p {
+    @include TextSecondary;
+  }
+}
+.photoContainer {
+  padding: 8px 8px 12px 8px;
+}
+.photoItem {
+  padding-top: 100%;
+  position: relative;
+}
+.photoBody {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+  box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.staffPhoto {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  background-color: $body-background-primary;
+  position: relative;
+}
+.circle {
+  position: relative;
+}
+.shadow {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  background-color: transparent;
+  position: absolute;
+  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.15);
+  z-index: -1;
+  top: 0px;
+  left: -1px;
+}
+
+@media screen and (max-width: 1540px) {
+  .avatar,
+  .shadow {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .avatar,
+  .shadow {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .photoContainer {
+    padding: 0 8px 12px 8px;
+  }
+  .staffInfo {
+    align-items: start;
+  }
+}

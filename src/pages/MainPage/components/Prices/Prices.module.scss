@@ -1,0 +1,48 @@
+@import "../../../../main.module.scss";
+
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 100px 100px;
+}
+.container {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+}
+.text {
+  grid-column: span 12;
+  margin-top: 30px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+}
+.atention {
+  grid-column: span 12;
+  a {
+    color: #93650c;
+  }
+}
+.atention a:hover {
+  color: $body-color-secondary;
+  font-weight:500;
+}
+.spinnerContainer {
+  grid-column: span 12;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1280px) {
+  .services {
+    margin: 0 50px 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .services {
+    margin: 0 20px 30px;
+  }
+}

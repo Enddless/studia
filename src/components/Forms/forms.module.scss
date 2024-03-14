@@ -1,0 +1,120 @@
+@import "../../main.module.scss";
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  fieldset {
+    position: relative;
+    border: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      display: block;
+    }
+  }
+  label {
+    @include TextPlaceholder;
+  }
+  input {
+    margin-top: 9px;
+    border: 1px solid $gray;
+    position: relative;
+  }
+
+  .eyeIcon {
+    position: absolute;
+    right: 18px;
+    top: 46px;
+    cursor: pointer;
+  }
+  /* удаление иконки отображения пароля в IE */
+  input[type="password"]::-ms-reveal {
+    display: none;
+  }
+  /* удаление иконки стрелок */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .linkGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include TextPlaceholder;
+    label {
+      cursor: pointer;
+    }
+    label:hover {
+      color: $btn-background-one;
+      transition: all 150ms ease-in;
+    }
+  }
+
+  .errorInput {
+    border: 1px solid red;
+    outline: none;
+  }
+  .errorMessage {
+    text-align: right;
+    width: 70%;
+    color: red;
+    font-size: 11px;
+    position: absolute;
+    line-height:14px;
+    top: 2px;
+    right: 0px;
+  }
+
+  button {
+    margin: 10px auto 0;
+  }
+  .disabled {
+    @include ButtonDisabled();
+  }
+}
+
+.agreement {
+  margin-top: 15px;
+
+  .agreeCheckbox {
+    @include TextFieldTitle;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align:justify;
+    column-gap: 10px;
+  }
+}
+.conditions:hover {
+  color: $btn-color-three;
+}
+.modalForm {
+  display: block;
+}
+.modalFormDisabled {
+  display: none;
+}
+
+.backButton {
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  @include TextFieldTitle;
+}
+.backButton:hover {
+  color: $btn-background-one;
+  transition: all 150ms ease-in;
+}

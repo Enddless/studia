@@ -1,0 +1,45 @@
+@import "../../../../../../main.module.scss";
+
+.toolbar {
+  display: flex;
+  margin-bottom: 30px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  column-gap: 10px;
+  button {
+    width: 150px;
+  }
+}
+.searchForm {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+  position: relative;
+}
+.iconSearch {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.content {
+  @include Grid;
+}
+.table {
+  grid-column: span 11;
+
+}
+.controlsButton {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  row-gap:20px;
+  button {
+    width: 100%;
+  }
+}

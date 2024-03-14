@@ -1,0 +1,22 @@
+@import "../../../../main.module.scss";
+.layout {
+  margin: 20px 20px 20px 0;
+  padding:20px;
+  background: white;
+  border: 1px solid $btn-border;
+}
+.overlay {
+  background: url("../../../../assets/images/earth.jpg") no-repeat;
+  background-size: cover;
+  filter: grayscale(0.75);
+  -webkit-filter: grayscale(0.75);
+  padding:0;
+  margin: 40px 20px 40px 0;
+}
+@media screen and (max-width: 600px) {
+  .layout {
+    grid-column: span 12;
+    grid-row: 2;
+    margin:0;
+  }
+}

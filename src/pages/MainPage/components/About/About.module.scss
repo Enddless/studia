@@ -1,0 +1,68 @@
+@import "../../../../main.module.scss";
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 100px 100px;
+  row-gap: 10px;
+}
+
+.text,
+.galerry {
+  grid-column: span 12;
+}
+.text {
+  margin-bottom: 20px;
+}
+.galerry {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  column-gap: 20px;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  grid-column: span 4;
+  position: relative;
+}
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  margin: 0 auto;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.atention {
+  grid-column: span 12;
+  a {
+    color: #93650c;
+  }
+}
+.atention a:hover {
+  color: $body-color-secondary;
+  font-weight:500;
+}
+
+.spinnerContainer {
+  grid-column: span 12;
+  margin-top: 30px;
+}
+@media screen and (max-width: 1280px) {
+  .about {
+    margin: 0 50px 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about {
+    margin: 0 20px 30px;
+  }
+}

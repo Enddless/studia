@@ -1,0 +1,19 @@
+@import "../../../main.module.scss";
+
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+@media screen and (max-width: 1240px) {
+  .btnGroup {
+    button {
+      padding:12px;
+    }
+  }
+}

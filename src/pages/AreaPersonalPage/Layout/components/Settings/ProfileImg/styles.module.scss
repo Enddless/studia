@@ -1,0 +1,60 @@
+@import "../../../../../../main.module.scss";
+
+.submit {
+  top: 634px;
+  position: absolute;
+  cursor: pointer;
+}
+.profileImg {
+  width: 50%;
+  max-width: 512px;
+  background: #c4ccc1; //будет удалено
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+  padding: 20px;
+  position: relative;
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  input[type="file"] {
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .errorMessage {
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
+    color: red;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profileImg {
+    width: 100%;
+    max-width: 100%;
+    height:400px;
+  }
+}

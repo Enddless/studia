@@ -1,0 +1,33 @@
+@import "../../main.module.scss";
+
+.slick-prev:before,
+.slick-next:before {
+  color: $gray;
+}
+.slick-dots {
+  bottom: 4px;
+}
+.slick-dots li {
+  margin: 0 7px;
+}
+.slick-dots li button:before {
+  background: rgba(0, 0, 0, 1);
+  border:3px solid white;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.slick-dots li.slick-active button:before {
+    border:8px solid #31811b;
+    background: white;
+    top:-5px;
+  }
+
+#staff .slick-dots {
+    bottom: -35px;
+}

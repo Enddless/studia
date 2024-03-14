@@ -1,0 +1,117 @@
+@import "../../main.module.scss";
+
+.btn {
+  @include ButtonPrimary();
+  text-decoration: none;
+  color: $btn-color-one;
+}
+.btn:hover {
+  transition: all 150ms ease-in;
+}
+
+// ***** кнопка входа ******
+.btnEnter {
+  background: $btn-background-one;
+}
+.btnEnter:hover {
+  background: $btn-background-two;
+  color: $btn-color-two;
+}
+
+// ***** кнопка подгрузки отзывов ******
+.btnMore {
+  background: $btn-background-one;
+}
+.btnMore:hover {
+  background: $btn-background-three;
+}
+
+// ***** кнопка войти или зарегистрироваться в формах входа ******
+.btnRegistration {
+  background: $btn-background-four;
+}
+.btnRegistration:hover {
+  background: $btn-background-one;
+}
+
+// ***** кнопки меню в ЛК пользователя ******
+.btnMenuUser {
+  @include H5;
+  color: $btn-color-two;
+  outline: 1px solid $btn-border;
+  box-shadow: 2px 2px 15px 0px $btn-boxshadow;
+}
+.btnMenuUser:hover,
+.activeMenuUser {
+  background: $btn-background-three;
+  color: $btn-color-one;
+  outline: 1px solid $btn-background-three;
+}
+
+// ***** кнопки сохранения, удаления, записи в ЛК пользователя ******
+.btnSave {
+  background: $btn-background-three;
+  color: $btn-color-one;
+  @include fluidFontSize(14px, 16px, 1280px, 1920px);
+}
+.btnSave:hover {
+  background: $btn-background-four;
+}
+.btnDelete {
+  color: $btn-color-two;
+  background: $btn-background-two;
+  text-decoration: none;
+  width: 100%;
+  @include fluidFontSize(14px, 16px, 1280px, 1920px);
+}
+.btnDelete:hover {
+  color: $btn-color-one;
+  background: $btn-background-five;
+}
+.btnRecord {
+  background: $btn-background-one;
+  @include fluidFontSize(14px, 16px, 1280px, 1920px);
+}
+.btnRecord:hover {
+  background: $btn-background-three;
+}
+
+// ***** заблокированные кнопки******
+.btnDisabled, .btnDisabled:hover {
+  cursor: not-allowed;
+  background: rgb(182, 182, 182);
+  color: white;
+}
+// ***** кнопки сохранения, удаления в ЛК пользователя ******
+.btnAdd {
+  background: $btn-background-three;
+  color: $btn-color-one;
+}
+.btnAdd:hover {
+  background: $btn-background-four;
+}
+
+// ***** кнопки  в ЛК администратора ******
+.btnDashboardAdmin {
+  @include H5;
+  color: $btn-color-two;
+  outline: 1px solid $btn-border;
+  background: transparent;
+
+}
+.btnDashboardAdmin:hover,
+.activeDashboardMenu {
+  background: $btn-background-three;
+  color: $btn-color-one;
+  outline: 1px solid $btn-background-three;
+}
+
+.btnCancel {
+  background: $btn-background-five;
+  color: $btn-color-one;
+}
+.btnCancel:hover {
+  background: $btn-background-four;
+}
+
+//добавить кнопки для отзыва и записи для пользователя

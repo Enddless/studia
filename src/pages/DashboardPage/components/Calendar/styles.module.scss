@@ -1,0 +1,33 @@
+@import "../../../../main.module.scss";
+
+.primaryEvent {
+  background: inherit;
+  color: inherit;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+.control {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.firstEvent {
+  background: rgba(19, 52, 10, 0.1);
+  border: 1px solid rgba(19, 52, 10, 1) !important;
+  border-top: 10px solid rgba(19, 52, 10, 1) !important;
+}
+.secondaryEvent {
+  background: rgba(255, 168, 0, 0.1);
+  border: 1px solid rgba(255, 168, 0, 1) !important;
+  border-top: 10px solid rgba(255, 168, 0, 1) !important;
+}
+.thirdEvent {
+  background: rgba(58, 163, 30, 0.1);
+  border: 1px solid rgba(58, 163, 30, 1) !important;
+  border-top: 10px solid rgba(58, 163, 30, 1) !important;
+}
+
+.customCalendarStyle {
+  width: 100%;
+  position: relative;
+}

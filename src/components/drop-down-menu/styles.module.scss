@@ -1,0 +1,76 @@
+@import "../../main.module.scss";
+.area {
+  position: absolute;
+  z-index: 402;
+  width: 180px;
+  padding: 60px 20px 20px;
+  right: 0px;
+  top: 0px;
+  background: white;
+  color: #13340a;
+  @include TextLink;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 500ms ease-in-out;
+  box-shadow: 6px 6px 20px 0px rgba(63, 63, 62, 0.7);
+
+  & svg {
+    stroke: #13340a;
+  }
+
+  .closeContainer {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+  .decoration {
+    position: absolute;
+    top: -12px;
+    right: 20%;
+    transform: translate(-20%, 0);
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid white;
+  }
+}
+
+.active {
+  opacity: 1;
+  right: 0px;
+  top: 79px;
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+.submenu {
+  cursor: pointer;
+  margin-bottom:10px;
+  width:100%;
+
+  
+  a {
+    display: flex;
+    align-items: center;
+    column-gap:10px;
+  }
+}
+.submenu:hover {
+  font-weight: 500;
+  color: #ffa800;
+}
+.submenu:hover svg {
+  stroke: #ffa800;
+}
+
+@media screen and (max-width: 1400px) {
+  .area {
+    width: 180px;
+  }
+}

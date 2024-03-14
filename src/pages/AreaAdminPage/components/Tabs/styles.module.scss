@@ -1,0 +1,39 @@
+@import "../../../../main.module.scss";
+
+.logoContainer {
+  padding: 10px 60px 10px 10px;
+  height: 86px;
+}
+.menu {
+  @include TextLink;
+  margin-top:20px;
+}
+.menuItem {
+  display: block;
+  width: 100%;
+  padding: 10px 0 10px 20px;
+}
+.menuItem:hover {
+  background: $btn-background-five;
+}
+.active {
+  background: $btn-background-one;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0 10px 30px;
+  cursor: pointer;
+  & svg {
+    margin-right: 20px;
+    stroke: #FDF8F0;
+  }
+}
+.controls {
+  position: relative;
+  bottom: 0;
+  @include TextLink;
+}
+

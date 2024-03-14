@@ -1,0 +1,38 @@
+@import "../../../../../../main.module.scss";
+
+.container {
+  @include Grid;
+  gap:20px;
+}
+.card {
+  padding:20px;
+  grid-column: span 4;
+  border-radius: 10px;
+  border: 1px solid $card-border-color;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.05);
+}
+.controlGroup {
+  display: flex;
+  justify-content: flex-end;
+  column-gap:20px;
+}
+.text {
+  grid-column: span 12; 
+}
+.add {
+  display: flex;
+  justify-content: center;
+  margin:60px 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .card {
+    grid-column: span 6;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    grid-column: span 12;
+  }
+}

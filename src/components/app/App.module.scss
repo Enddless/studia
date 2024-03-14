@@ -1,0 +1,101 @@
+@import "../../main.module.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  user-select: none;
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: justify;
+  background: $body-background-primary;
+  @include TextPrimary;
+}
+h1 {
+  @include H1;
+}
+h2 {
+  @include H2;
+}
+h3 {
+  @include H3;
+}
+h4 {
+  @include H4;
+}
+h5 {
+  @include H5;
+}
+input,
+textarea {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  background: $white;
+  box-shadow: 2px 6px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 13px 10px;
+  cursor: pointer;
+  @include TextFieldPlaceholder;
+}
+input:hover,
+textarea:hover {
+  outline: 1px solid #ffa800;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #3aa31e;
+}
+
+.app {
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+.spinnerContainer {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+// .blurContent {
+//   filter: blur(15px);
+//   background: $blur-background;
+//   -webkit-filter: blur(15px);
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 401;
+// }
+
+//scrollbar
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #256613;
+  border-radius: 10px 10px 10px 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fdf8f0;
+  border: 2px solid #256613;
+  border-radius: 10px 10px 10px 10px;
+}

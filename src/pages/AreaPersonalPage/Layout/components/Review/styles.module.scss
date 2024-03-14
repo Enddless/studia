@@ -1,0 +1,40 @@
+@import "../../../../../main.module.scss";
+
+.wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 785px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  textarea {
+    resize: none;
+    height: auto;
+  }
+  button {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .groupStar {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    svg{
+      cursor: pointer;
+      stroke: #13340a;
+      fill: none;
+    }
+    svg:hover  {
+      fill: #ffa800;
+      stroke: #ffa800;
+    }
+  }
+}

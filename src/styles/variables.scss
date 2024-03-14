@@ -1,0 +1,163 @@
+@import "./mixins.scss";
+
+$black: #000000;
+$white: #fff;
+$gray: #e4e3e3;
+$opacity-black: #00000099;
+$athens-gray: #d9d9d9;
+$blur-background: rgba(0, 0, 0, .4);
+$table-shadow: rgba(0, 0, 0, 0.05);
+
+//PRIMARY SETTINGS
+$body-background-primary: #fffcf8;
+$body-color-primary: #13340a;
+$body-color-secondary: #3AA31E;
+$body-family-primary: "Manrope";
+@mixin Grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+// ***** TEXT SETTINGS ***** //
+@mixin TextPrimary {
+  @include fluidFontSize(16px, 18px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  font-family: $body-family-primary;
+  color: $body-color-primary;
+}
+@mixin TextSecondary {
+  @include fluidFontSize(12px, 16px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 140%;
+}
+@mixin TextPlaceholder {
+  @include fluidFontSize(14px, 16px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 24px;
+}
+@mixin TextFieldPlaceholder {
+  @include fluidFontSize(14px, 16px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 24px;
+}
+@mixin TextFieldTitle {
+  @include fluidFontSize(12px, 12px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 16px;
+}
+@mixin TextFieldDescription {
+  @include fluidFontSize(12px, 12px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 16px;
+}
+@mixin TextLink {
+  @include fluidFontSize(14px, 20px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 24px;
+}
+@mixin H1 {
+  @include fluidFontSize(54px, 56px, 1280px, 1920px);
+  font-weight: 500;
+  line-height: 110%;
+}
+@mixin H2 {
+  @include fluidFontSize(44px, 48px, 1280px, 1920px);
+  font-weight: 500;
+  line-height: 120%;
+}
+@mixin H3 {
+  @include fluidFontSize(20px, 32px, 1280px, 1920px);
+  font-weight: 500;
+  line-height: 120%;
+}
+@mixin H4 {
+  @include fluidFontSize(22px, 24px, 1280px, 1920px);
+  font-weight: 500;
+  line-height: 120%;
+}
+@mixin H5 {
+  @include fluidFontSize(14px, 18px, 1280px, 1920px);
+  font-weight: 500;
+  line-height: 120%;
+}
+
+//HEADER SETTINGS
+$header-background: #13340a;
+$header-color: #fdf8f0;
+
+//FOOTER SETTINGS
+$footer-background: #13340a;
+$footer-color: #fdf8f0;
+
+//BUTTON SETTINGS
+$btn-background-one: #ffa800;
+$btn-background-two: #FFFCF8;
+$btn-background-three: #3AA31E;
+$btn-background-four: #13340A;
+$btn-background-five: #FFC700;
+$btn-background-six: #71856C;
+$btn-background-seven: #C4CCC1;
+
+$btn-color-one: #FFFCF8;
+$btn-color-two: #13340A;
+$btn-color-three:#ffa800;
+
+$btn-boxshadow: #0000004d;
+$btn-border: #13340a;
+$input-border: #ffa800;
+
+@mixin ButtonPrimary {
+  display: flex;
+  // width: 119px;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: $body-family-primary;
+  @include fluidFontSize(14px, 20px, 1280px, 1920px);
+  font-weight: 400;
+  line-height: 24px;
+  background: transparent;
+}
+@mixin ButtonDisabled {
+  background: $gray;
+  cursor: not-allowed;
+}
+
+//TITLE SETTINGS
+$title-color-default: #ffa800;
+$subtitle-color-default: #fdf8f0;
+
+//CARD SETTINGS
+$card-price-background: #fff;
+$card-review-background: white;
+$card-hall-background: #fff;
+$card-border-color: #13340a;
+$card-title-color: #fffcf8;
+
+//REVIEWS SETTINGS
+$date-color: #71856c;
+
+//DASHBOARD SETTINGS
+$dashboard-color: #13340a;
+
+//FORM ENTER SETTINGS
+$form-enter-background: #fdf8f0;
+$form-enter-color: #13340a;
+
+//PERSONAL AREA: NOTIFICATION SETTINGS
+$notification-background: #c4ccc1;
+$form-enter-background: #fdf8f0;
+
+//SIDEBAR IN ADMIN SETTINGS
+$sidebar-background: #13340a;
+$sidebar-color: #fdf8f0;
+$layout-card-background: #fdf8f0;
+
+//DESCRIPTION
+$description-border-color: #71856c;

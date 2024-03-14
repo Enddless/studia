@@ -1,0 +1,16 @@
+@import "../../../../../../main.module.scss";
+
+.container {
+  width: 100%;
+}
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  column-gap:10px;
+  button {
+    margin: 0;
+    min-width: 120px;
+  }
+}

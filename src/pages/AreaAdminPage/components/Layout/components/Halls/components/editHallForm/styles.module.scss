@@ -1,0 +1,92 @@
+@import "../../../../../../../../main.module.scss";
+
+.container {
+  width: 460px;
+  min-height: 575px;
+  padding: 70px 55px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
+  border-radius: 4px;
+  border: 1px solid $card-border-color;
+  background: $body-background-primary;
+}
+
+.control {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap:10px;
+}
+.form {
+  label,
+  textarea {
+    width: 100%;
+    background: $white;
+    box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 252px;
+    margin-bottom: 20px;
+    cursor:pointer;
+  }
+  textarea {
+    height: auto;
+    resize: none;
+  }
+  input[type="file"] {
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+   //scrollbar
+   textarea::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  textarea::-webkit-scrollbar-track {
+    background: #256613;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #fdf8f0;
+    border: 2px solid #256613;
+    border-radius: 10px 10px 10px 10px;
+  }
+}
+.download {
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.errorMessage {
+  position: absolute;
+  font-size:12px;
+  color: red;
+  width: 100px;
+  bottom: 90px;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    width: 375px;
+  }
+}

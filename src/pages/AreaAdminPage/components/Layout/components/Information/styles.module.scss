@@ -1,0 +1,42 @@
+@import "../../../../../../main.module.scss";
+
+.container {
+  margin: 40px 0;
+  @include Grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap:10px;
+}
+.document {
+  grid-column: span 5;
+  padding: 30px 20px 30px 30px;
+  border-radius:10px;
+  border: 1px solid #13340a;
+  position: relative;
+  cursor:pointer;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.document:hover {
+  border: 1px solid #ffa800;
+}
+.file {
+
+  padding: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+.controlGroup {
+  padding: 0 0 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  row-gap: 20px;
+  flex-direction: column;
+  border-left: 2px solid #ffa800;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+

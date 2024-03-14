@@ -1,0 +1,110 @@
+@import "../../main.module.scss";
+
+.header {
+  width: 100%;
+  height: 139px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px 30px;
+  background: $header-background;
+  color: $header-color;
+  position: relative;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 60px;
+  margin: 0 15px;
+}
+.menuItem {
+  cursor: pointer;
+  @include H5;
+  position: relative;
+  white-space: nowrap;
+  border-radius: 10px;
+}
+.menuItem:hover {
+  color: #ffa800;
+}
+
+.subMenu {
+  position: relative;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+
+  & button {
+    width: 100%;
+    text-align: left;
+  }
+}
+.buttonContainer {
+  width: 180px;
+  button {
+    width: 100%;
+  }
+}
+.userControl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  svg {
+    cursor: pointer;
+    stroke: #FDF8F0;
+  }
+  svg:hover {
+    stroke:#FFA800;
+    stroke-width: 2.5;
+  }
+}
+.burgerMenu {
+  position: relative;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1600px) {
+  .navigation {
+    column-gap: 40px;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .subMenu {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .navigation {
+    column-gap: 15px;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .subMenu {
+    width: 100px;
+  }
+  .buttonContainer {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .burgerMenu {
+    display: block;
+    position: relative;
+  }
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 20px;
+  }
+}

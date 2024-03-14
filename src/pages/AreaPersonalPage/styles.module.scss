@@ -1,0 +1,12 @@
+@import "../../main.module.scss";
+
+.container {
+  margin: 0 100px 66px;
+  min-height: 700px;
+}
+
+@media screen and (max-width: 1540px) {
+  .container {
+    margin: 0 66px 66px;
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../../../../../styles/variables.scss";
+
+.container {
+  position: relative;
+  padding-right: 30px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding:10px;
+}
+.controlGroup {
+  background: $body-background-primary;
+  position: absolute;
+  right: 0;
+}
+.card {
+  max-width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {height: 100%;}
+}
+
+.add {
+  label {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    @include ButtonPrimary();
+    padding: 12px;
+    background: $btn-background-three;
+    color: $btn-color-one;
+    @include fluidFontSize(14px, 16px, 1280px, 1920px);
+  }
+  label:hover {
+    background: $btn-background-five;
+  }
+  input[type="file"] {
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+}
+.updateForm {
+  position: relative;
+  height: 100%;
+  .update {
+    position: absolute;
+    z-index: 15;
+    right: -43px;
+    top: 10px;
+  }
+  img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  input[type="file"] {
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  svg {
+    stroke: $btn-color-one;
+  }
+}
+
+.errorMessage {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}

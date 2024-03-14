@@ -1,0 +1,22 @@
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rightControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.control {
+  cursor: pointer;
+  stroke: #13340A;
+  stroke-width:1.5;
+}
+.control:hover {
+  stroke:#FFA800;
+  stroke-width: 2.5;
+}
+.activeControlButton {
+  stroke:#3AA31E;
+}

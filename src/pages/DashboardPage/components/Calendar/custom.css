@@ -1,0 +1,43 @@
+.rbc-time-view .rbc-allday-cell {
+  display: none;
+}
+.rbc-calendar {
+  height: auto;
+  font-size:16px;
+}
+.rbc-toolbar .rbc-btn-group button {
+  margin:1px;
+  background: #3AA31E;
+  color: white;
+  cursor: pointer;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+}
+.rbc-toolbar .rbc-toolbar-label {
+  margin:5px;
+  background: #3AA31E;
+  color: white;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+}
+.rbc-toolbar .rbc-btn-group button:hover {
+  background: #ffc700;
+  transition: background 0.3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+}
+
+.rbc-day-slot .rbc-events-container {
+  margin-right: 0;
+}
+.rbc-current-time-indicator{
+  display: none;
+}
